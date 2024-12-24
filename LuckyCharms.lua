@@ -1,5 +1,6 @@
 -- Localize API Globals
 local CanViewOfficerNote = C_GuildInfo.CanViewOfficerNote
+local GetAddOnMetadata   = C_AddOns.GetAddOnMetadata
 local GetGuildInfo       = GetGuildInfo
 local GetGuildRosterInfo = GetGuildRosterInfo
 local GetNumGroupMembers = GetNumGroupMembers
@@ -105,11 +106,15 @@ SlashCmdList["LUCKYCHARMS"] = function(msg)
         print("[|cffff0000Lucky Charms|r]: Addon is not paused")
     elseif msg == "status" then
         print("[|cffff0000Lucky Charms|r]: Addon is currently " .. (LuckyCharmsDB.Paused and "paused" or "unpaused"))
+    elseif msg == "version" then
+        local version = GetAddOnMetadata("LuckyCharms", "Version")
+        print("[|cffff0000Lucky Charms|r]: Version " .. version)
     elseif msg == "help" then
         print("[|cffff0000Lucky Charms|r]: Commands List...")
         print("/lc pause - Pauses/Unpauses the addon")
         print("/lc unpause - Unpauses the addon")
         print("/lc resume - Unpauses the addon")
         print("/lc status - Prints the addon's status")
+        print("/lc version - Prints the addon's version")
     end
 end
