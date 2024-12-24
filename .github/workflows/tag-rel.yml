@@ -49,4 +49,4 @@ jobs:
           asset_content_type: application/zip
       # Use the BigWigs packager for Wago output
       - name: Package and Release
-        uses: BigWigsMods/packager@v1
+        uses: BigWigsMods/packager@v2
