@@ -32,6 +32,11 @@ if type(LuckyCharmsDB) ~= "table" then
     LuckyCharmsDB.Paused = false
 end
 
+-- Check for empty variable
+local function IsEmpty(var)
+    return var == nil or var == ''
+end
+
 -- Create our Guild Table
 local function CreateGuildList()
     if not IsInGuild() then return end
@@ -58,8 +63,9 @@ local function CheckPartyMembers()
         for i = 1, GetNumGroupMembers() - 1 do
             local Name = UnitName("party"..i)
             local Note = GuildMembers[Name]
-            if Note ~= nil then
-                SetRaidTarget(Name, Charms[Note])
+            local CharmType = Charms[Note]
+            if not IsEmpty(Note) and not IsEmpty(CharmType) then
+                SetRaidTarget(Name, CharmType)
             end
         end
     end
