@@ -3,7 +3,7 @@
 ## Title: Lucky Charms
 ## Notes: Automatically mark <Lucky Charms> members when in a group.
 
-## Version: 1.15.5.02
+## Version: 1.15.5.02a
 ## Author: Cilraaz
 
 ## SavedVariables: LuckyCharmsDB
