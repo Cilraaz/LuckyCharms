@@ -20,9 +20,9 @@ local Charms = {}
 Charms["Cilraaz"] = 1
 Charms["Loki"]    = 2
 Charms["Ceace"]   = 3
-Charms["Arlee"]   = 4
+Charms["Dave"]    = 4
+Charms["Arlee"]   = 7
 Charms["Vely"]    = 6
-Charms["Dave"]    = 8
 
 -- Guild Table
 local GuildMembers = {}
